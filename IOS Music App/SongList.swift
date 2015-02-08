@@ -26,11 +26,25 @@ class SongList {
         songDictionary.removeValueForKey(songToRemove)
     }
     
-    func print() {
+    func print() -> [Song] {
         var songList: [Song] = []
-        for song in songDictionary {
-            
+        for song in songDictionary.values {
+            songList.append(song)
+        }
+        let sortedSongs = songList.sorted { $0.name < $1.name }
+        
+        return sortedSongs
+    }
+    
+    func print(var artist: String) -> [Song] {
+        artist = artist.lowercaseString
+        var result: [Song] = []
+        for song in songDictionary.values {
+            if song.artist.lowercaseString == artist {
+                result.append(song)
+            }
         }
         
+        return result
     }
 }
