@@ -24,8 +24,8 @@ class ViewController: UIViewController {
     let mySongList = SongList()
     
     func refreshUI(){
-        yearLabel.text=String(format: "Year %d",Int(yearStepper.value))
-        lengthLabel.text=String(format: "Length %d s",Int(lengthSlider.value))
+        yearLabel.text=String(format: "Year (%d)",Int(yearStepper.value))
+        lengthLabel.text=String(format: "Length (%d) s",Int(lengthSlider.value))
         //displayField.text=""
     }
 
