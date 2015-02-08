@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet var yearStepper: UIStepper!
     @IBOutlet var yearLabel: UILabel!
     @IBOutlet var lengthLabel: UILabel!
+    @IBOutlet var scroll: UIScrollView!
+    @IBOutlet var displayField: UITextField!
     
     func refreshUI(){
         songNameField.text=""
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
         yearStepper.value=2000
         yearLabel.text=String(format: "Year %d",Int(yearStepper.value))
         lengthLabel.text=String(format: "Length %d s",Int(lengthSlider.value))
+        displayField.text=""
     }
 
     override func viewDidLoad() {
@@ -43,12 +46,18 @@ class ViewController: UIViewController {
     @IBAction func yearChanged(){
         
     }
-    @IBAction func lengthChanged(){
+    @IBAction func lengthChanged(sender: AnyObject){
+        
         
     }
     @IBAction func addClicked(){
         
     }
-    @IBAction func
+    @IBAction func removeClicked(){
+        
+    }
+    @IBAction func displayChanged(){
+        
+    }
 }
 
