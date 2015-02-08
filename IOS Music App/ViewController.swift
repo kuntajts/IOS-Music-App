@@ -24,10 +24,6 @@ class ViewController: UIViewController {
     let mySongList = SongList()
     
     func refreshUI(){
-        songNameField.text=""
-        artistField.text=""
-        albumField.text=""
-        composerField.text=""
         yearLabel.text=String(format: "Year %d",Int(yearStepper.value))
         lengthLabel.text=String(format: "Length %d s",Int(lengthSlider.value))
         //displayField.text=""
@@ -52,14 +48,21 @@ class ViewController: UIViewController {
     }
     @IBAction func addClicked(sender: AnyObject){
         mySongList.addSong(songNameField.text, artist: artistField.text, album: albumField.text, year: Int(yearStepper.value), composer: composerField.text, length: Int(lengthSlider.value))
+        
+        songNameField.text=""
+        artistField.text=""
+        albumField.text=""
+        composerField.text=""
         refreshUI()
         
     }
     @IBAction func removeClicked(sender: AnyObject){
         mySongList.removeSong(songNameField.text)
-        refreshUI()
-    }
-    @IBAction func displayChanged(sender: AnyObject){
+        
+        songNameField.text=""
+        artistField.text=""
+        albumField.text=""
+        composerField.text=""
         refreshUI()
     }
     
@@ -73,7 +76,15 @@ class ViewController: UIViewController {
         var results = ""
         let songArray = mySongList.print()
         for songs in songArray{
-            results += "\(songs.name) \t \(songs.artist) \t \(songs.length) \n"
+            results += "\(songs.name)\t\(songs.artist)\t\(songs.length)\n"
+        }
+        resultsField.text = results
+    }
+    @IBAction func displayArtistSongs(sender: AnyObject) {
+        var results = ""
+        let songArray = mySongList.print(artistPrintField.text)
+        for songs in songArray{
+            results += "\(songs.name)\t\(songs.artist)\t\(songs.length)\n"
         }
         resultsField.text = results
     }

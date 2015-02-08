@@ -126,6 +126,9 @@
                                 <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="displayArtistSongs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gDX-eW-qob"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSM-67-xcA">
                                 <rect key="frame" x="16" y="498" width="70" height="30"/>
@@ -136,10 +139,10 @@
                                     <action selector="displaySongs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ikp-zz-HFd"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1SJ-Fk-ih7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SJ-Fk-ih7">
                                 <rect key="frame" x="210" y="296" width="374" height="296"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -193,7 +196,8 @@
                     </view>
                     <connections>
                         <outlet property="albumField" destination="1nb-RF-6Zw" id="qU0-4k-lBk"/>
-                        <outlet property="artistField" destination="Yn4-ae-HWU" id="COX-dn-PYI"/>
+                        <outlet property="artistField" destination="tmM-nb-iX1" id="LGi-kF-L4b"/>
+                        <outlet property="artistPrintField" destination="iEs-WX-LWo" id="EJK-KR-B0s"/>
                         <outlet property="composerField" destination="eDq-kR-p9d" id="2IW-7t-a2x"/>
                         <outlet property="lengthLabel" destination="OjG-o4-EWP" id="cB7-Y9-Wof"/>
                         <outlet property="lengthSlider" destination="gqe-W4-vnz" id="mnK-5b-Snw"/>
@@ -204,7 +208,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Uoq-Sw-cma"/>
+                <tapGestureRecognizer id="Uoq-Sw-cma">
+                    <connections>
+                        <action selector="viewTapped:" destination="BYZ-38-t0r" id="Bie-Xn-ExS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="288" y="172"/>
         </scene>
