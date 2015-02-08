@@ -18,19 +18,19 @@ class ViewController: UIViewController {
     @IBOutlet var yearStepper: UIStepper!
     @IBOutlet var yearLabel: UILabel!
     @IBOutlet var lengthLabel: UILabel!
-    @IBOutlet var scroll: UIScrollView!
-    @IBOutlet var displayField: UITextField!
+    @IBOutlet var resultsField: UITextView!
+    @IBOutlet var artistPrintField: UITextField!
+    
+    let mySongList = SongList()
     
     func refreshUI(){
         songNameField.text=""
         artistField.text=""
         albumField.text=""
         composerField.text=""
-        lengthSlider.value=500
-        yearStepper.value=2000
         yearLabel.text=String(format: "Year %d",Int(yearStepper.value))
         lengthLabel.text=String(format: "Length %d s",Int(lengthSlider.value))
-        displayField.text=""
+        //displayField.text=""
     }
 
     override func viewDidLoad() {
@@ -43,21 +43,39 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func yearChanged(){
-        
+    @IBAction func yearChanged(sender: AnyObject){
+        refreshUI()
     }
     @IBAction func lengthChanged(sender: AnyObject){
-        
-        
-    }
-    @IBAction func addClicked(){
+        refreshUI()
         
     }
-    @IBAction func removeClicked(){
+    @IBAction func addClicked(sender: AnyObject){
+        mySongList.addSong(songNameField.text, artist: artistField.text, album: albumField.text, year: Int(yearStepper.value), composer: composerField.text, length: Int(lengthSlider.value))
+        refreshUI()
         
     }
-    @IBAction func displayChanged(){
-        
+    @IBAction func removeClicked(sender: AnyObject){
+        mySongList.removeSong(songNameField.text)
+        refreshUI()
+    }
+    @IBAction func displayChanged(sender: AnyObject){
+        refreshUI()
+    }
+    
+    @IBAction func viewTapped(sender : AnyObject) {
+        songNameField.resignFirstResponder()
+        artistField.resignFirstResponder()
+        albumField.resignFirstResponder()
+        composerField.resignFirstResponder()
+    }
+    @IBAction func displaySongs(sender: AnyObject){
+        var results = ""
+        let songArray = mySongList.print()
+        for songs in songArray{
+            results += "\(songs.name) \t \(songs.artist) \t \(songs.length) \n"
+        }
+        resultsField.text = results
     }
 }
 

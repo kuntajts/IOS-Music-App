@@ -65,6 +65,9 @@
                             </textField>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2000" minimumValue="1900" maximumValue="2015" translatesAutoresizingMaskIntoConstraints="NO" id="cKI-mN-xQy">
                                 <rect key="frame" x="150" y="203" width="94" height="29"/>
+                                <connections>
+                                    <action selector="yearChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z8O-fH-9Cx"/>
+                                </connections>
                             </stepper>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-48-rRG">
                                 <rect key="frame" x="31" y="207" width="76" height="21"/>
@@ -82,16 +85,19 @@
                                 <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uJv-dz-zng"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyz-2l-cYT">
                                 <rect key="frame" x="119" y="318" width="57" height="30"/>
                                 <state key="normal" title="Remove">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="removeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSs-Wr-Cjc"/>
+                                </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hIG-e3-x6q">
-                                <rect key="frame" x="208" y="374" width="339" height="184"/>
-                            </scrollView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year (2000):" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPN-X8-4cD">
                                 <rect key="frame" x="32" y="207" width="90" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -106,18 +112,36 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="500" minValue="1" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-W4-vnz">
                                 <rect key="frame" x="148" y="258" width="342" height="31"/>
+                                <connections>
+                                    <action selector="lengthChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bVE-9q-GJG"/>
+                                </connections>
                             </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEs-WX-LWo">
-                                <rect key="frame" x="31" y="451" width="169" height="30"/>
+                            <textField clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type artist name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEs-WX-LWo">
+                                <rect key="frame" x="16" y="374" width="169" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display songs:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wn-qH-Nio">
-                                <rect key="frame" x="31" y="422" width="113" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0l-Gi-fRR">
+                                <rect key="frame" x="16" y="424" width="48" height="30"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSM-67-xcA">
+                                <rect key="frame" x="16" y="498" width="70" height="30"/>
+                                <state key="normal" title="Display all">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="displaySongs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ikp-zz-HFd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1SJ-Fk-ih7">
+                                <rect key="frame" x="210" y="296" width="374" height="296"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -133,9 +157,7 @@
                             <constraint firstItem="gqe-W4-vnz" firstAttribute="leading" secondItem="OjG-o4-EWP" secondAttribute="trailing" constant="4" id="DUt-kc-RHp"/>
                             <constraint firstItem="RPN-X8-4cD" firstAttribute="leading" secondItem="OjG-o4-EWP" secondAttribute="leading" id="H0k-CN-rwb"/>
                             <constraint firstItem="K2X-au-Zkf" firstAttribute="leading" secondItem="744-ZM-aj7" secondAttribute="leading" id="KSL-nj-opb"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hIG-e3-x6q" secondAttribute="bottom" constant="42" id="L3S-ke-2Vd"/>
                             <constraint firstItem="tmM-nb-iX1" firstAttribute="top" secondItem="Yn4-ae-HWU" secondAttribute="bottom" constant="8" symbolic="YES" id="M3b-h9-BMd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hIG-e3-x6q" secondAttribute="trailing" constant="37" id="M3r-RD-jKC"/>
                             <constraint firstItem="Yn4-ae-HWU" firstAttribute="leading" secondItem="744-ZM-aj7" secondAttribute="trailing" constant="23" id="N2D-Rf-ZY2"/>
                             <constraint firstItem="7KM-SQ-fW1" firstAttribute="top" secondItem="RcW-V8-DHH" secondAttribute="bottom" constant="25" id="PFn-Bx-NBU"/>
                             <constraint firstItem="g0z-48-rRG" firstAttribute="leading" secondItem="7KM-SQ-fW1" secondAttribute="leading" id="R9H-mI-PpQ"/>
@@ -175,6 +197,7 @@
                         <outlet property="composerField" destination="eDq-kR-p9d" id="2IW-7t-a2x"/>
                         <outlet property="lengthLabel" destination="OjG-o4-EWP" id="cB7-Y9-Wof"/>
                         <outlet property="lengthSlider" destination="gqe-W4-vnz" id="mnK-5b-Snw"/>
+                        <outlet property="resultsField" destination="1SJ-Fk-ih7" id="0n0-BF-aPH"/>
                         <outlet property="songNameField" destination="Yn4-ae-HWU" id="xcC-or-qkU"/>
                         <outlet property="yearLabel" destination="RPN-X8-4cD" id="VzY-Q7-QBl"/>
                         <outlet property="yearStepper" destination="cKI-mN-xQy" id="Cpq-QD-8Co"/>
