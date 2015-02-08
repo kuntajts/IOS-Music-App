@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56ABF75D1A87F72D00E2F8C9 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ABF75C1A87F72D00E2F8C9 /* Song.swift */; };
+		56BE7E6D1A87F466007D9949 /* SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BE7E6C1A87F466007D9949 /* SongList.swift */; };
 		66F9026F1A87EED500D65004 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9026E1A87EED500D65004 /* AppDelegate.swift */; };
 		66F902711A87EED500D65004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F902701A87EED500D65004 /* ViewController.swift */; };
 		66F902741A87EED500D65004 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66F902721A87EED500D65004 /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56ABF75C1A87F72D00E2F8C9 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		56BE7E6C1A87F466007D9949 /* SongList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongList.swift; sourceTree = "<group>"; };
 		66F902691A87EED500D65004 /* IOS Music App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS Music App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F9026D1A87EED500D65004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66F9026E1A87EED500D65004 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		66F9026B1A87EED500D65004 /* IOS Music App */ = {
 			isa = PBXGroup;
 			children = (
+				56ABF75C1A87F72D00E2F8C9 /* Song.swift */,
+				56BE7E6C1A87F466007D9949 /* SongList.swift */,
 				66F9026E1A87EED500D65004 /* AppDelegate.swift */,
 				66F902701A87EED500D65004 /* ViewController.swift */,
 				66F902721A87EED500D65004 /* Main.storyboard */,
@@ -212,7 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56ABF75D1A87F72D00E2F8C9 /* Song.swift in Sources */,
 				66F902711A87EED500D65004 /* ViewController.swift in Sources */,
+				56BE7E6D1A87F466007D9949 /* SongList.swift in Sources */,
 				66F9026F1A87EED500D65004 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +415,7 @@
 				66F9028A1A87EED600D65004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		66F9028B1A87EED600D65004 /* Build configuration list for PBXNativeTarget "IOS Music AppTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +424,7 @@
 				66F9028D1A87EED600D65004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
