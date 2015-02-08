@@ -9,6 +9,26 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var songNameField: UITextField!
+    @IBOutlet var artistField: UITextField!
+    @IBOutlet var albumField: UITextField!
+    @IBOutlet var composerField: UITextField!
+    @IBOutlet var lengthSlider: UISlider!
+    @IBOutlet var yearStepper: UIStepper!
+    @IBOutlet var yearLabel: UILabel!
+    @IBOutlet var lengthLabel: UILabel!
+    
+    func refreshUI(){
+        songNameField.text=""
+        artistField.text=""
+        albumField.text=""
+        composerField.text=""
+        lengthSlider.value=500
+        yearStepper.value=2000
+        yearLabel.text=String(format: "Year %d",Int(yearStepper.value))
+        lengthLabel.text=String(format: "Length %d s",Int(lengthSlider.value))
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +40,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func yearChanged(){
+        
+    }
+    @IBAction func lengthChanged(){
+        
+    }
+    @IBAction func addClicked(){
+        
+    }
+    @IBAction func
 }
 
