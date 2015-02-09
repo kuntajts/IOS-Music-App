@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  IOS Music App
 //
-//  Created by Jordan Smith on 2/8/15.
+//  Created by Charles Woodward, Sam Kamenetz, Jordan Smith and Kal Popzlatev on 2/8/15.
 //  Copyright (c) 2015 Sugr. All rights reserved.
 //
 
