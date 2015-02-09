@@ -24,8 +24,9 @@ class ViewController: UIViewController {
     
     let mySongList = SongList()
     
+    //connects labels to the respective feature (slider for duration and stepper for year)
     func refreshUI(){
-        //connects labels to the respective feature (slider for duration and stepper for year)
+        
       
         yearLabel.text=String(format: "Year (%d)",Int(yearStepper.value))
         lengthLabel.text=String(format: "Length (%d) s",Int(lengthSlider.value))
@@ -48,9 +49,12 @@ class ViewController: UIViewController {
         refreshUI()
         
     }
+    
+    //addClicked
+    //connects action of clicking add button to the add function in Song/SongList model
+    //created by Jordan Smith
     @IBAction func addClicked(sender: AnyObject){
-        //connects action of clicking add button to the add function in Song/SongList model
-        //created by Jordan Smith
+
         mySongList.addSong(songNameField.text, artist: artistField.text, album: albumField.text, year: Int(yearStepper.value), composer: composerField.text, length: Int(lengthSlider.value))
         
         songNameField.text=""
@@ -60,9 +64,12 @@ class ViewController: UIViewController {
         refreshUI()
         
     }
+    
+    //removeClicked
+    //connects action of clicking remove button to the remove function in Song/SongList model
+    //created by Kal Popzlatev
     @IBAction func removeClicked(sender: AnyObject){
-        //connects action of clicking remove button to the remove function in Song/SongList model
-        //created by Kal Popzlatev
+
         mySongList.removeSong(songNameField.text)
         
         songNameField.text=""
@@ -78,9 +85,11 @@ class ViewController: UIViewController {
         albumField.resignFirstResponder()
         composerField.resignFirstResponder()
     }
+    //displaySongs
+    //connects action of clicking display ALl button with the print function of Song/SongList model
+    //Created by Sam Kamenetz
     @IBAction func displaySongs(sender: AnyObject){
-        //connects action of clicking display ALl button with the print function of Song/SongList model
-        //Created by Sam Kamenetz
+
         var results = ""
         let songArray = mySongList.print()
         for songs in songArray{
@@ -88,9 +97,11 @@ class ViewController: UIViewController {
         }
         resultsField.text = results
     }
+    //displayArtistSongs
+    //connects action :(clicking search button & input in artist name text field) to print(artistname) function of Song/SongList class
+    //created by Charles Woodward
     @IBAction func displayArtistSongs(sender: AnyObject) {
-        //connects action :(clicking search button & input in artist name text field) to print(artistname) function of Song/SongList class
-        //created by Charles Woodward
+
         var results = ""
         let songArray = mySongList.print(artistPrintField.text)
         for songs in songArray{
