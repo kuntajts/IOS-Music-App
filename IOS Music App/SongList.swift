@@ -29,7 +29,6 @@ class SongList {
     //creates an instance of the Song class and adds it to dictionary using the lowercase for the name of the song as a key
     //Created by Charles Woodward;
     func addSong (var name: String, artist: String, album: String, year: Int, composer: String, length: Int) {
-
         
         let newSong = Song(name: name, artist: artist, album: album, year: year, composer: composer, length: length)
         name = name.lowercaseString
@@ -74,7 +73,6 @@ class SongList {
                 result.append(song)
             }
         }
-        
         return result
     }
 }

@@ -10,14 +10,14 @@
 	<string>IOS Music App</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B82DB6EBEC1E9CE88ADC212E1670A4B6E13B0421</key>
+		<key>E41D3DDAD0DBB6B143AB523FF1967905D1009815</key>
 		<string>https://github.com/kuntajts/IOS-Music-App.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>IOS Music App.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B82DB6EBEC1E9CE88ADC212E1670A4B6E13B0421</key>
+		<key>E41D3DDAD0DBB6B143AB523FF1967905D1009815</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B82DB6EBEC1E9CE88ADC212E1670A4B6E13B0421</string>
+	<string>E41D3DDAD0DBB6B143AB523FF1967905D1009815</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B82DB6EBEC1E9CE88ADC212E1670A4B6E13B0421</string>
+			<string>E41D3DDAD0DBB6B143AB523FF1967905D1009815</string>
 			<key>IDESourceControlWCCName</key>
 			<string>IOS-Music-App</string>
 		</dict>

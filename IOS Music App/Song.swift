@@ -15,9 +15,7 @@ class Song {
     var album: String
     var year: Int
     var composer: String
-    var length: Int
-    
-    
+    var length: Int    
     
     //Constructor
     //Param in: string(Song Name); string(Artist Name); string(Album Name); int(Year of Release); int(Song Duration in sec)
